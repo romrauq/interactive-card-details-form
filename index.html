@@ -10,11 +10,27 @@
 
 	<body>
 		<main>
-			<div class="left-column">
-				<img src="" alt="" class="card-front" />
-				<img src="" alt="" class="card-back" />
-			</div>
-			<div class="right-column">
+			<div class="center-container">
+				<div class="cards-column">
+					<div class="card-container card-front-container">
+						<img
+							src="./resources/images/bg-card-front.png"
+							alt=""
+							srcset=""
+							class="card-image"
+						/>
+					</div>
+
+					<div class="card-container card-back-container">
+						<img
+							src="./resources/images/bg-card-back.png"
+							alt=""
+							srcset=""
+							class="card-image"
+						/>
+					</div>
+				</div>
+
 				<form class="form-body">
 					<div class="input-row-container">
 						<label for="">Cardholder Name</label>
@@ -25,7 +41,7 @@
 							placeholder="e.g. Jane Appleseed"
 							class="input-field"
 						/>
-						<p class="alert-text" id="fullname-alert"></p>
+						<p class="alert-text" id="fullname-alert">This field cannot be left empty</p>
 					</div>
 
 					<div class="input-row-container">
@@ -37,22 +53,31 @@
 							placeholder="e.g. 1234 5678 9123 0000"
 							class="input-field"
 						/>
-						<p class="alert-text" id="card-number-alert"></p>
+						<p class="alert-text" id="card-number-alert">Wrong format, numbers only</p>
 					</div>
 
 					<div class="input-columns-container">
 						<div class="input-column-1">
 							<label for="">Exp. Date (MM/YY)</label>
 							<div class="mm-yy-row">
-								<input type="text" placeholder="MM" class="input-field" />
-								<input type="text" placeholder="YY" class="input-field" />
+								<input
+									type="number"
+									placeholder="MM"
+									class="input-field input-field-small"
+								/>
+								<input
+									type="number"
+									placeholder="YY"
+									class="input-field input-field-small"
+								/>
 							</div>
-							<p class="alert-text" id="mm-yy-alert"></p>
+							<p class="alert-text" id="mm-yy-alert">Can't be blank</p>
 						</div>
+
 						<div class="input-column-2">
 							<label for="">CVC</label>
 							<input type="number" name="" id="" placeholder="eg. 123" class="input-field" />
-							<p class="alert-text" id="cvc-alert"></p>
+							<p class="alert-text" id="cvc-alert">Can't be blank</p>
 						</div>
 					</div>
 					<button class="button confirm-button" id="confirm-button">Confirm</button>
