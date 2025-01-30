@@ -117,6 +117,8 @@ main {
 	border-radius: 10px;
 	/* box-shadow: 4px 30px 15px rgba(0, 0, 0, 0.15); */
 }
+/* .right-column{	
+} */
 .form-body {
 	display: flex;
 	flex-direction: column;
@@ -191,13 +193,25 @@ label {
 .confirm-button {
 }
 .thank-you-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	width: 400px;
 	display: none;
 }
 .complete-form-icon {
+	width: 100px;
 }
 .heading-text {
+	text-transform: uppercase;
 }
 .subtext {
+	color: var(--Dark-grayish-violet);
+	font-size: 14px;
+}
+.continue-button {
+	width: 100%;
 }
 .attribution {
 	width: 300px;
@@ -262,18 +276,16 @@ label {
 	.card-number-text {
 		font-size: 18px;
 	}
+	.right-column {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
 	.form-body {
 		width: 90%;
 	}
-	.confirm-button {
-	}
 	.thank-you-container {
-		display: none;
-	}
-	.complete-form-icon {
-	}
-	.heading-text {
-	}
-	.subtext {
+		width: 90%;
 	}
 }
