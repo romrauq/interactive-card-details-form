@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 }
 :root {
+	--background-color: rgb(241, 241, 241);
 	--red: hsl(0, 100%, 66%);
 	--White: hsl(0, 0%, 100%);
 	--light-grayish-violet: hsl(270, 3%, 87%);
@@ -23,6 +24,7 @@ body {
 	background-image: url("../images/bg-main-desktop.png");
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-color: var(--background-color);
 }
 main {
 	font-size: 18px;
@@ -77,6 +79,7 @@ label {
 	font-size: 18px;
 	width: 100%;
 	padding: 10px;
+	background-color: var(--background-color);
 	border-radius: 5px;
 	border: 1px solid var(--light-grayish-violet);
 	outline: none;
