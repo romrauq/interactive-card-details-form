@@ -42,16 +42,19 @@ main {
 	flex-direction: column;
 	gap: 30px;
 }
-/* .card-container {
-} */
+.card-container {
+	width: fit-content;
+}
 .card-front-container {
 	position: relative;
 	margin: 0 0 0 -100px;
 }
 /* .card-back-container {
-} */
+	} */
 .card-image {
 	width: 400px;
+	border-radius: 10px;
+	box-shadow: 4px 30px 15px rgba(0, 0, 0, 0.15);
 }
 .form-body {
 	display: flex;
