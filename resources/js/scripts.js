@@ -35,7 +35,9 @@ confirm_button.addEventListener("click", (event) => {
 		card_number_alert.style.display = "none";
 		card_number_output.textContent = card_number_input.value;
 	}
-	if (month_input.value == "") {
+
+	let month_value = parseInt(month_input.value);
+	if (isNaN(month_value) || month_value < 1 || month_value > 12) {
 		month_input.style.border = "1px solid hsl(0, 100%, 66%)";
 		month_year_alert.style.display = "block";
 	} else {
@@ -43,6 +45,7 @@ confirm_button.addEventListener("click", (event) => {
 		month_year_alert.style.display = "none";
 		month_expiry_output.textContent = month_input.value;
 	}
+
 	if (year_input.value == "") {
 		year_input.style.border = "1px solid hsl(0, 100%, 66%)";
 		month_year_alert.style.display = "block";
@@ -63,7 +66,9 @@ confirm_button.addEventListener("click", (event) => {
 	if (
 		fullname_input.value != "" &&
 		card_number_input.value != "" &&
-		month_input.value != "" &&
+		!isNaN(month_value) &&
+		month_value >= 1 &&
+		month_value <= 12 &&
 		year_input.value != "" &&
 		cvc_input.value != ""
 	) {
