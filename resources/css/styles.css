@@ -94,7 +94,7 @@ main {
 }
 .card-number-text {
 	font-size: 24px;
-	word-spacing: 10px;
+	word-spacing: 8px;
 }
 .card-details-row {
 	display: flex;
