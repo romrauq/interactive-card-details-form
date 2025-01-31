@@ -27,13 +27,19 @@ confirm_button.addEventListener("click", (event) => {
 		fullname_alert.style.display = "none";
 		fullname_output.textContent = fullname_input.value;
 	}
+
 	if (card_number_input.value == "") {
 		card_number_input.style.border = "1px solid hsl(0, 100%, 66%)";
 		card_number_alert.style.display = "block";
 	} else {
 		card_number_input.style.border = "1px solid hsl(270, 3%, 87%)";
 		card_number_alert.style.display = "none";
-		card_number_output.textContent = card_number_input.value;
+		// Format card number: insert a space after every 4 digits
+		const formattedCardNumber = card_number_input.value
+			.replace(/\D/g, "")
+			.replace(/(.{4})/g, "$1 ")
+			.trim();
+		card_number_output.textContent = formattedCardNumber;
 	}
 
 	let month_value = parseInt(month_input.value);
@@ -54,6 +60,7 @@ confirm_button.addEventListener("click", (event) => {
 		month_year_alert.style.display = "none";
 		year_expiry_output.textContent = year_input.value;
 	}
+
 	if (cvc_input.value == "") {
 		cvc_input.style.border = "1px solid hsl(0, 100%, 66%)";
 		cvc_alert.style.display = "block";
